@@ -25,7 +25,7 @@ import Styles from "./Header.module.scss";
 
 import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
-import routesConfig from "./../../../../configs/routes";
+import Config from "./../../../../configs/routes";
 const cx = classNames.bind(Styles);
 
 const MENU_ITEMS = [
@@ -164,7 +164,7 @@ function Header() {
   return (
     <header className={cx("wrapper")}>
       <div className={cx("inner")}>
-        <Link to={routesConfig.home}>
+        <Link to={Config.home}>
           <div className={cx("logo")}>
             <img src={images.logo} alt="TikTok" />
           </div>
