@@ -10,11 +10,12 @@ import HeadlessTippy from "@tippyjs/react/";
 import classNames from "classnames/bind";
 import { useState, useEffect, useRef } from "react";
 import { Wrapper } from "../../Popper";
-import AccountItem from "../../Accountitem";
+
 import useDebounce from "./../../../../../hooks/useDebounce";
 
 import Styles from "./Search.module.scss";
 import * as searchService from "./../../../../../Service/searchService";
+import AccountItem from './../../Accountitem/Accountitem';
 
 const cx = classNames.bind(Styles);
 

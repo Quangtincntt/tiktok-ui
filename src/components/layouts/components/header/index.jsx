@@ -16,8 +16,7 @@ import "tippy.js/dist/tippy.css";
 import Tippy from "@tippyjs/react/";
 
 import images from "./../../../../assets/img/index";
-
-import Button from "./../button/index";
+import Button from "../button/Button";
 import Menu from "../Popper/Menu";
 import Images from "../images";
 import Search from "./Search";
@@ -111,7 +110,6 @@ const MENU_ITEMS = [
           code: "en",
           title: "English",
         },
-        
       ],
     },
   },
@@ -216,4 +214,5 @@ function Header() {
     </header>
   );
 }
+
 export default Header;

@@ -1,5 +1,5 @@
 import Tippy from "@tippyjs/react/headless";
-
+import PropTypes from "prop-types"; // ES6
 import Styles from "./Menu.module.scss";
 import classNames from "classnames/bind";
 import Wrapper from "../Wrapper";
@@ -12,7 +12,6 @@ const cx = classNames.bind(Styles);
 function Menu({ children, items = [], onChange }) {
   const [history, setHistory] = useState([{ data: items }]);
   const current = history[history.length - 1];
-
   const renderItem = () => {
     return current.data.map((item, index) => {
       const isParent = !!item.children;
@@ -59,5 +58,10 @@ function Menu({ children, items = [], onChange }) {
     </Tippy>
   );
 }
+
+Menu.propTypes = {
+  children: PropTypes.node.isRequired,
+  items: PropTypes.array.isRequired,
+};
 
 export default Menu;
